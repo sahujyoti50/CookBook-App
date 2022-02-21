@@ -1,0 +1,98 @@
+<!-- <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+<p *ngIf="showSecret">Secret password=tuna</p>
+<div *ngFor="let logItem of log, let i=index" [ngStyle]="{backgroundColor: i >= 4 ? 'blue':'green'}"
+    [ngClass]="{'white-color':i >= 4 }">{{i+1}} {{logItem}}</div> -->
+
+<!---------------------------------------------------------------------------->
+<!--{4} by click on button display data,toggle button,display value in every click,change color from 5th log --assignment question my way-->
+<!-- <label>Secret password</label>
+<input type="text"
+[(ngModel)]="inputText">
+<button (click)="getDetails()"
+class="btn btn-primary">Display Details</button>
+<br/>
+<p *ngIf="showDetails">Entered Secret password {{displayText}}</p>
+<div *ngFor="let text of storeValue"
+[ngStyle]="{backgroundColor:getColor()}">{{text}}</div> -->
+<!---------------------------------------------------------------------------->
+<!-- ngIf and ngIf else used -->
+<!-- <input type="text"
+[(ngModel)]="ServerName"/>
+<p>{{ServerName}}</p>
+<button 
+class="btn btn-primary" 
+[disabled]="allowNewUser"
+(click)="showInnerStatus()">Add Server</button>
+<p [innerText]="allowNewUser">servers works!</p>
+<p *ngIf="showMsg; else NoServer">New Server Created successfully!!</p> 
+<!- ngIf and ngIf else used -->
+<!--p>{{InnerStatus}}</!--p>
+<ng-template #NoServer>
+<p>No Server Created!!</p>
+</ng-template>
+<app-server *ngFor="let server of servers"></app-server> -->
+
+<!------------------------------------------------------------------------------------>
+<!-- <input type="text"      //ngIf else Used
+[(ngModel)]="ServerName"/>
+<p>{{ServerName}}</p>
+<button 
+class="btn btn-primary" 
+[disabled]="allowNewUser"
+(click)="showInnerStatus()">Add Server</button>
+<p [innerText]="allowNewUser">servers works!</p>
+<p *ngIf="showMsg; else NoServer">New Server Created successfully!!</p> 
+ngIf and ngIf else used -->
+<!--ng-template #NoServer>
+<p>No Server Created!!</p>
+</!--ng-template>
+<app-server></app-server>
+<app-server></app-server> -->
+
+<!---------------------------------------------------------------------->
+<!--   1} first program/two way data binding/timer to enable button----------------------->
+<!-- <label>Server Name</label>
+<input type="text"
+(input)="showInputValue($event)"/> 
+&nbsp;
+<input type="text"
+[(ngModel)]="ServerName"/>
+<p>{{ServerName}}</p>
+<button 
+class="btn btn-primary" 
+[disabled]="allowNewUser"
+(click)="showInnerStatus()">Add Server</button>
+<p>{{InnerStatus}}</p>
+<p [innerText]="allowNewUser">servers works!</p>
+<app-server></app-server> -->
+<!---------------------------------------------------------------------->
+
+<!--2}Reset Button/disable when empty/By click on the button it will empty the input field------------->
+
+<!-- <label>User Name</label> &nbsp;
+<input  type="text"
+[(ngModel)]="username"
+(input)="inputValueEntered($event)">
+<p>{{username}}</p>
+<button
+class="btn btn-primary" 
+[disabled]="resetButton"
+(click)="resetTheUserName()">Reset</button> 
+---------------------------------------------------------------------->
+
+<!--3)Reset Button/disable when empty/By click on the button it will empty the input field
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+<label>User Name</label> &nbsp;
+<input  type="text"
+[(ngModel)]="username">
+<p>{{username}}</p>
+<button 
+class="btn btn-primary"
+[disabled]=" username === '' "
+(click)=" username = '' ">Reset</button>
+    </div>
+</div>
+</div> 
+----------------------------------------------------------------------------->
